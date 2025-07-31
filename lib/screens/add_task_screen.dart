@@ -317,11 +317,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
       toLatLng: _destinationLatLng,
     );
 
-    // ✅ Schedule local notification if enabled
-    // if (_enableNotification) {
-    //   await _scheduleNotification(_selectedDateTime!, _titleController.text);
-    //
-    // }
+    
 
     // Return to home screen with new task
     widget.onAdd(newTask);
@@ -434,10 +430,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                   child: const Text('No'),
                 ),
                 ElevatedButton(
-                  // onPressed: () {
-                  //   Navigator.pop(context); // ✅ Close the dialog first
-                  //   Future.microtask(() => _submit()); // ✅ Defer _submit to avoid context error
-                  // },
+                  
                   onPressed: () {
                     Navigator.of(context)
                         .pop(); // ✅ Ensure dialog closes immediately
