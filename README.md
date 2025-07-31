@@ -38,11 +38,24 @@ FlowGo is a wellness + productivity mobile app built with Flutter that helps use
 - A valid **Google Maps API Key**
 - Android emulator or physical Android device
 
+To run this app, you must provide your own Google Maps Platform API key.
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com/).
+2. Create an API key with the following APIs enabled:
+   - Maps SDK for Android
+   - Places API
+   - Directions API
+   - Geocoding API
+3. Restrict the key to your Android app package (recommended).
+4. **Pass the key during build using this command:**
+
+
+flutter build apk --dart-define=GOOGLE_API_KEY=YOUR_ACTUAL_API_KEY
+
 ---
 
 ### Installation
 
-```bash
 git clone https://github.com/yourusername/flowgo.git
 cd flowgo
 flutter pub get
