@@ -18,7 +18,7 @@ class TaskDetailScreen extends StatefulWidget {
 class _TaskDetailScreenState extends State<TaskDetailScreen> {
   GoogleMapController? _mapController;
   List<LatLng> _polylinePoints = [];
-  final String _googleApiKey = 'AIzaSyCOMcj1GEpwcZH125EoHGPe4HzGgYTJm8k';
+  final String _googleApiKey = const String.fromEnvironment('GOOGLE_API_KEY'); 
 
   @override
   void initState() {
