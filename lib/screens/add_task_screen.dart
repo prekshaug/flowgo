@@ -38,7 +38,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
   final _destinationController = TextEditingController();
 
 
-  final String _googleApiKey = 'AIzaSyCOMcj1GEpwcZH125EoHGPe4HzGgYTJm8k'; // Replace this
+  final String _googleApiKey = const String.fromEnvironment('GOOGLE_API_KEY'); // ✅ secure
 
   final GoogleMapsPlaces _places = GoogleMapsPlaces(
       apiKey: 'AIzaSyCOMcj1GEpwcZH125EoHGPe4HzGgYTJm8k');
